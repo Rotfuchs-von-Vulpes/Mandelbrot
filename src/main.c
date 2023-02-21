@@ -249,6 +249,7 @@ void resizeCallback(GLFWwindow *window, int width, int height)
 {
 	screen_width = width;
 	screen_height = height;
+	glViewport(0, 0, screen_width, screen_width);
 	for (size_t i = 0; i < 3; i++)
 	{
 		glUseProgram(shaders[i]);
